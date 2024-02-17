@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom cmd menu styles */
+[cmdk-group-heading] {
+  display: flex;
+  margin-left: 6px;
+  padding: 6px;
+  font-size: 12px;
+  opacity: 0.5;
+  color: #241c3d;
+}
+
+[cmdk-list] {
+  min-height: 200px;
+  height: var(--cmdk-list-height);
+  max-height: 361px;
+  transition: height 200ms ease;
+}
