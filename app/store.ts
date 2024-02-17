@@ -8,7 +8,7 @@ export type Store = {
 };
 
 const useStore = create<Store>((set) => ({
-  page: "home",
+  page: "Home",
   setPage: (newPage: string) => set(() => ({ page: newPage })),
   search: "",
   setSearch: (newSearch: string) => set(() => ({ search: newSearch })),
