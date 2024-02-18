@@ -60,7 +60,7 @@ export default function CommandMenu({ open, setOpen }: CommandMenuProps) {
       label="Global search"
       loop
       className={clsx(
-        "absolute left-1/2 top-[100px] z-50 w-full max-w-[95%] -translate-x-1/2 rounded-xl shadow-inner backdrop-blur-[50px] lg:top-[200px]",
+        "absolute left-1/2 top-[40px] z-50 w-full max-w-[95%] -translate-x-1/2 rounded-xl shadow-inner backdrop-blur-[50px] lg:top-[200px]",
         "border-2 bg-white font-medium shadow-sm md:max-w-[641px]",
       )}
       onKeyDown={handleKeyDown}

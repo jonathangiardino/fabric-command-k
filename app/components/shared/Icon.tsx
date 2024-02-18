@@ -24,14 +24,14 @@ export default function Icon({
             cy="7.6"
             r="4.85"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
           ></circle>
           <path
             d="M11.334 11.3335L15.0673 15.0668"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
           ></path>
         </svg>
       );
@@ -48,14 +48,14 @@ export default function Icon({
           <path
             d="M1.5 9a7.5 7.5 0 1 0 1.79-4.864"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
           ></path>
           <path
             d="M9 4.5V9l3.5 3.5"
             stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
           ></path>
         </svg>
       );
@@ -191,12 +191,12 @@ export default function Icon({
           xmlns="http://www.w3.org/2000/svg"
           className={clsx("text-secondary", { ["scale-75"]: size === "small" })}
         >
-          <g id="SVGRepo_bgCarrier" stroke-width="0" />
+          <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
           <g
             id="SVGRepo_tracerCarrier"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
 
           <g id="SVGRepo_iconCarrier">
