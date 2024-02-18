@@ -192,15 +192,25 @@ function CommandMenuFooter({
 }: {
   setOpen?: Dispatch<SetStateAction<boolean>>;
 }) {
+  const { page, setPage } = useStore((state) => state);
+
   return (
     <div className="flex w-full items-center justify-between rounded-b-xl border-t-2 border-solid border-t-quaternary bg-background p-[6px]">
-      <Logo size="small" />
+      <Logo size="small" className="hidden md:flex" />
       <button
-        className="rounded-md bg-brand px-2 py-1 text-xs text-white md:hidden"
+        className="rounded-md bg-brand px-3 py-2 text-sm text-white md:hidden"
         onClick={() => setOpen?.(false)}
       >
-        ↓ Tap here to close
+        Close
       </button>
+      {page !== "Home" ? (
+        <button
+          className="rounded-md bg-brand/5 px-3 py-2 text-sm text-brand md:hidden"
+          onClick={page !== "Home" ? () => setPage("Home") : () => {}}
+        >
+          Back
+        </button>
+      ) : null}
     </div>
   );
 }
