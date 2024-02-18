@@ -1,6 +1,8 @@
 import {
+  Dispatch,
   Fragment,
   KeyboardEvent as ReactKeyboardEvent,
+  SetStateAction,
   useEffect,
   useState,
 } from "react";
@@ -60,7 +62,7 @@ export default function CommandMenu({ open, setOpen }: CommandMenuProps) {
       label="Global search"
       loop
       className={clsx(
-        "absolute left-1/2 top-[40px] z-50 w-full max-w-[95%] -translate-x-1/2 rounded-xl shadow-inner backdrop-blur-[50px] lg:top-[200px]",
+        "fixed left-1/2 top-2 z-50 w-full max-w-[95%] -translate-x-1/2 rounded-xl shadow-inner backdrop-blur-[50px] md:top-[120px]",
         "border-2 bg-white font-medium shadow-sm md:max-w-[641px]",
       )}
       onKeyDown={handleKeyDown}
@@ -79,7 +81,7 @@ export default function CommandMenu({ open, setOpen }: CommandMenuProps) {
           </Fragment>
         )}
         {page !== "Home" ? (
-          <div className="absolute bottom-1 right-3 flex items-center gap-2 text-[10px] text-brand">
+          <div className="absolute bottom-1 right-3 hidden items-center gap-2 text-[10px] text-brand md:flex">
             Go back
             <span
               className={clsx(
@@ -105,7 +107,7 @@ export default function CommandMenu({ open, setOpen }: CommandMenuProps) {
       />
       <Command.List className={clsx("scroll-p-[6px] overflow-auto p-[6px]")}>
         <Command.Empty className="flex h-[176px] w-full items-center justify-center gap-2 text-secondary">
-          <Logo size="small" className="animate-bouncea text-secondary" /> No
+          <Logo size="small" className="animate-bounce text-secondary" /> No
           results found
         </Command.Empty>
         <AllGroups page={page} groups={groups} />
@@ -130,7 +132,7 @@ export default function CommandMenu({ open, setOpen }: CommandMenuProps) {
         ))}
       </Command.List>
 
-      <CommandMenuFooter />
+      <CommandMenuFooter setOpen={setOpen} />
     </Command.Dialog>
   );
 }
@@ -185,10 +187,20 @@ function FavoritesSubGroup({
   ) : null;
 }
 
-function CommandMenuFooter() {
+function CommandMenuFooter({
+  setOpen,
+}: {
+  setOpen?: Dispatch<SetStateAction<boolean>>;
+}) {
   return (
     <div className="flex w-full items-center justify-between rounded-b-xl border-t-2 border-solid border-t-quaternary bg-background p-[6px]">
       <Logo size="small" />
+      <button
+        className="rounded-md bg-brand px-2 py-1 text-xs text-white md:hidden"
+        onClick={() => setOpen?.(false)}
+      >
+        ↓ Tap here to close
+      </button>
     </div>
   );
 }

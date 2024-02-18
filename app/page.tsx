@@ -15,8 +15,8 @@ export default function Home() {
   return (
     <Inspect>
       <div className="flex h-svh max-h-full overflow-hidden">
-        <aside className="flex h-full flex-col items-center justify-start gap-3 border-r-2 px-4 py-5">
-          <Link href="/" className="mb-2">
+        <aside className="fixed bottom-0 flex w-full items-center justify-evenly gap-3 border-t-[1px] px-4 py-2 sm:relative sm:bottom-auto sm:h-full sm:w-auto sm:flex-col sm:justify-start sm:border-r-2 sm:border-t-0 sm:py-5">
+          <Link href="/" className="sm:mb-2">
             <Logo />
           </Link>
           <Button
@@ -36,8 +36,8 @@ export default function Home() {
             command="⌘O"
           />
         </aside>
-        <main className="w-full bg-background px-2 py-6 lg:p-10">
-          <h1 className="pb-1 text-heading-1 font-extrabold -tracking-[.64px]">
+        <main className="w-full bg-background p-4 sm:p-10">
+          <h1 className="text-heading-2 pb-1 font-extrabold -tracking-[.64px] sm:text-heading-1">
             Welcome, Jonathan Giardino
           </h1>
         </main>

@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontSize: {
         "heading-1": ["32px", "32px"],
+        "heading-2": ["24px", "32px"],
       },
       colors: {
         brand: "#0310F5",

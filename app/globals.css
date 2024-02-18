@@ -29,3 +29,9 @@ body {
   max-height: 361px;
   transition: height 200ms ease;
 }
+
+@media (max-width: 768px) {
+  [cmdk-list] {
+    max-height: 240px;
+  }
+}

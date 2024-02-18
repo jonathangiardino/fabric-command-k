@@ -12,7 +12,7 @@ export default function CommandItem({ item }: { item: Item }) {
       key={item.id}
       className={clsx(
         "group flex items-center justify-between rounded-md px-[14px] py-3 text-primary",
-        "aria-[selected]:bg-brand/5 aria-[selected]:shadow-inner",
+        "aria-[selected]:bg-brand/5 aria-[selected]:shadow-inner text-sm lg:text-base",
       )}
     >
       <div className="flex items-center gap-2">
